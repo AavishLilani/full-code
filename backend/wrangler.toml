@@ -1,0 +1,37 @@
+# Wrangler Configuration for Cloudflare Workers
+
+name = "backend"
+main = "src/index.ts"
+compatibility_date = "2025-02-13"
+
+# Uncomment and configure the following if necessary
+# compatibility_flags = ["nodejs_compat"]
+
+# Uncomment and configure the following if necessary
+[vars]
+DATABASE_URL="postgresql://neondb_owner:npg_XDBUg7mzSx5W@ep-cold-mountain-a8gwpvkh-pooler.eastus2.azure.neon.tech/neondb?sslmode=require"
+
+# Uncomment and configure the following if using KV namespaces
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Uncomment and configure the following if using R2 buckets
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# Uncomment and configure the following if using D1 databases
+# [[d1_databases]]
+# binding = "MY_DB"
+# database_name = "my-database"
+# database_id = ""
+
+# Uncomment and configure the following if using AI
+# [ai]
+# binding = "AI"
+
+# Observability configuration
+[observability]
+enabled = true
+head_sampling_rate = 1
